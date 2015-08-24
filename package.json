@@ -8,8 +8,6 @@
   },
   "scripts": {
     "test": "node test/*.js",
-    "is_formatted": "find . -name '*.js' | grep -v node_modules | grep -v coverage | xargs jscs --preset=google",
-    "is_linted": "find . -name '*.js' | grep -v node_modules | grep -v coverage | xargs eslint",
     "coverage": "istanbul cover test/index.js && istanbul check-coverage"
   },
   "keywords": [
@@ -44,17 +42,12 @@
     "csv-parse": "^0.1.1",
     "debug": "^2.2.0",
     "lodash": "^3.9.1",
-    "minigun-core": "latest",
-    "open": "0.0.5"
+    "minigun-core": "git@github.com:RataWorks/minigun-core.git",
+    "open": "0.0.5",
+    "api_auth": "0.0.2-4"
   },
   "devDependencies": {
-    "eslint": "^0.21.2",
     "istanbul": "^0.3.14",
-    "pre-commit": "^1.0.7",
     "tape": "^4.0.0"
   },
-  "pre-commit": [
-    "is_linted",
-    "is_formatted"
-  ]
 }
