@@ -34,7 +34,7 @@ suggestions. I love hearing from users.
 
 **minigun** is available via [npm](http://npmjs.org)
 
-`$ npm install -g minigun`
+`run ./install.sh because of some issues that I had with dependency resolution in NPM we manually checkout some forked libraries
 
 ## Run
 
@@ -56,6 +56,8 @@ Where `hello.json` is your tests script that contains something like:
       "phases": [
         { "duration": 120, "arrivalRate": 10 }
       ],
+      "id" : "the api_auth id", 
+      "secret" : "the api_auth secret",
       "defaults": {
         "headers": {
           "content-type": "application/json",
